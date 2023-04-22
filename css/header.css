@@ -9,21 +9,23 @@
     color: #333;
     line-height: 1.4;
     margin: 0 auto 0 auto;
-    font-size: 34px;
+    font-size: 3rem;
     text-align: center;
 }
 
 a {
     color:black;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .logo-text {
     margin: auto auto auto auto;
-    font-size: 96px;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 0px;
     text-align: center;
     max-width: 910px;
     color: white;
+    font-style: italic;
+    letter-spacing: 7px;
 }
