@@ -16,7 +16,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #FFFDD0;
+    background-color: var(--cream);
     transition: 1s;
 }
 
@@ -25,7 +25,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 117, 37);
+    color: var(--logo-color);
 }
 
 .logo{
@@ -52,6 +52,49 @@
     transition: ease-in-out 0.5s;
 }
 
+/* Colors */
+/* https://colorhunt.co/palette/635985443c6839305318122b */
+:root {
+    --main-color: #635985;
+    --sub-color: #443C68;
+    --sub-color-2: #393053;
+    --sub-color-3: #18122B;
+    --logo-color: rgb(255, 117, 37);
+    --cream: #FFFDD0;
+}
+
+/* Header */
+.wrapper {
+    height: 100vh;
+}
+
+nav {
+    height: 44px;
+    background: var(--sub-color-3);
+}
+
+nav ul {
+    display: flex;
+    height: 44px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+/* Various Css */
+h1 {
+    color: var(--main-color);
+}
+
 /*
 LEGACY CSS
 
@@ -75,7 +118,7 @@ h1 {
 }
 
 #intro-screen {
-    background: #FFFDD0;
+    background: var(--cream);
     min-height: 100vh;
     min-width: 100vw;
     margin: 0;
@@ -90,7 +133,7 @@ h1 {
     font-size: 10rem;
     font-weight: 800;
     max-width: 910px;
-    color: rgb(255, 117, 37);
+    color: var(--logo-color);
     font-style: italic;
     letter-spacing: 7px;
 }
