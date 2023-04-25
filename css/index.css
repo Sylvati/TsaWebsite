@@ -103,7 +103,7 @@ h1 {
 }
 
 .backgroundImage {
-    background-image: url(/images/northern_lights.jpg);
+    background-image: url(images/northern_lights.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
