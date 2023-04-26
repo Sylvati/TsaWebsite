@@ -11,7 +11,7 @@
 
 .intro{
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -61,75 +61,232 @@
     --sub-color-3: #18122B;
     --logo-color: rgb(255, 117, 37);
     --cream: #FFFDD0;
+    --background-color: #1d1f20;
+    --box-background-color: #232526;
+    --box-border-color: #333;
+    --text-color: #fff;
+    --price-color: #bdc3c7;
+    --secondary-text-color: #bdc3c7;
+    --button-background-color: #3498db;
+    --button-text-color: #fff;
+    --button-hover-background-color: #2980b9;
+    --header-text-color: white;
+    --header-text-color-hover: var(--main-color);
+    --header-background-color-hover: rgb(0,0,0, 0.2);
 }
 
 /* Header */
 
-nav {
-    height: 44px;
-    background: var(--sub-color-3);
+header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-}
-
-nav ul {
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(12, 25, 51, 0.8) 0%, rgba(12, 25, 51, 0.4) 80%, rgba(12, 25, 51, 0) 100%);
+  }
+  
+  nav {
     display: flex;
-    height: 44px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    list-style-type: none;
-}
-
-nav a {
-    display: block;
-    color: white;
-    font-size: 0.94rem;
-    font-weight: lighter;
+    padding: 1rem;
+    background-color: var(--header-background-color);
+  }
+  
+  .logoNav {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .menu-links a {
+    color: var(--header-text-color);
     text-decoration: none;
+    font-size: 2rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    font-weight: 350;
+  }
+  
+  .menu-links a:hover {
+    color: var(--header-text-color-hover);
+    background-color: var(--header-background-color-hover);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    
+    .logoNav {
+      display: none;
+    }
+        
+    .menu-links {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .menu-links a {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+      }
 }
+  
 
-/* Various Css */
-h1 {
-    color: var(--logo-color);
-    text-align: center;
-    font-size: 5rem;
-}
+/* Main Section */
 
 .wrapper {
     height: 100vh;
     width: 100%;
 }
 
+.mainSection {
+    position: relative;
+    height: 100vh;
+}
+
 .backgroundImage {
-    background-image: url(images/northern_lights.jpg);
+    background-image: url(../images/northern_lights.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding-top: 35vh;
-    padding-bottom: 35vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
 }
 
-.stepOnePanel {
-    background-color: var(--sub-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-
-.stepOnePanel img {
-    max-width: 25%;
-    height:auto;
+h1 {
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 1rem;
 }
 
 h2 {
-    color: var(--logo-color);
-    text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
 }
+
+.ctaButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--logo-color);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.ctaButton:hover {
+    background-color: #fff;
+    color: var(--logo-color);
+}
+
+
+/* Css for flight options */
+.flight-section {
+    background-color: var(--background-color);
+}
+
+.flight-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flight-box {
+    background-color: var(--box-background-color);
+    border: 1px solid var(--box-border-color);
+    border-radius: 6px;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flight-box h3 {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.flight-box .price {
+    color: var(--price-color);
+    font-size: 28px;
+    margin: 0;
+}
+
+.flight-box ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.flight-box li {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.flight-box button {
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--button-text-color);
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+}
+
+.flight-box button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .flight-box {
+        width: 100%;
+    }
+}
+
+/* Seperator Css*/
+.separator {
+    background-color: #eee;
+    height: 0px;
+    margin: 60px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .separator h2 {
+    color: #333;
+    font-size: 2rem;
+    margin: 20px 0;
+    word-wrap: break-word;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .separator h2 {
+      font-size: 1.5rem;
+    }
+  }
 
 /* Phone overrides */
 @media (max-height: 950px) {
@@ -143,53 +300,5 @@ h2 {
     h2 {
         font-size: 2rem;
     }
-    .stepOnePanel {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-    }
     
 }
-
-/*
-LEGACY CSS
-
-body {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Helvetica, Arial, sans-serif;
-    color: #333;
-    line-height: 1.4;
-    font-size: 14px;
-    background-color: #e0e7ef;
-}
-
-h1 {
-    margin: 90px auto 0 auto;
-    font-size: 96px;
-    font-weight: 800;
-    line-height: 60px;
-    text-align: center;
-    max-width: 910px;
-    color: white;
-}
-
-#intro-screen {
-    background: var(--cream);
-    min-height: 100vh;
-    min-width: 100vw;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 1000;
-}
-
-.intro-text {
-    text-align: center;
-    line-height: 50vh;
-    font-size: 10rem;
-    font-weight: 800;
-    max-width: 910px;
-    color: var(--logo-color);
-    font-style: italic;
-    letter-spacing: 7px;
-}
-*/
