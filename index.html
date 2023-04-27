@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- End-->
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- End JQuery-->
     <!-- Stylesheets-->
     <link rel="stylesheet" href="css/index.css">
     <!-- End-->
@@ -21,33 +24,23 @@
             </h1>
         </div>
         <!-- End Splash Screen-->
-        <header>
-            <nav>
-              <img src="logo.png" alt="Space Tourism logo" class="logoNav">
-              <div class="menu-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-              </div>
-            </nav>
-          </header>
-
+        <!-- Header -->
+        <div id="header"></div>
+        <!-- End Header -->
         <div class="wrapper">
-            <!-- Header -->
-            <!-- End Header -->
             <!-- Actual Website -->
             <section class="mainSection">
                 <div class="backgroundImage">
                     <h1>Ready for the adventure of a lifetime?</h1>
                     <h2>Book your spaceflight today!</h2>
-                    <a href="#" class="ctaButton">Book Now</a>
+                    <a href="#booking-options" class="ctaButton">Book Now</a>
                 </div>
             </section>
             <div class="separator">
                 <h2>Revolutionary tech makes SpaceTrip's flights affordable for any Earthling.</h2>
             </div>              
             <!-- Flight Options -->
-            <section class="flight-section">
+            <section class="flight-section" id="booking-options">
                 <div class="flight-container">
                   <div class="flight-box">
                     <h3>Economy Flight</h3>
@@ -57,7 +50,7 @@
                       <li>In-flight entertainment system</li>
                       <li>Shared facilities</li>
                     </ul>
-                    <button>Book Now</button>
+                    <button id="economy-button">Book Now</button>
                   </div>
               
                   <div class="flight-box">
@@ -68,7 +61,7 @@
                       <li>Personalized service</li>
                       <li>Private facilities</li>
                     </ul>
-                    <button>Book Now</button>
+                    <button id="business-button">Book Now</button>
                   </div>
               
                   <div class="flight-box">
@@ -79,14 +72,21 @@
                       <li>Luxury space capsule flight experience</li>
                       <li>Exclusive starliner ship access</li>
                     </ul>
-                    <button>Book Now</button>
+                    <button id="executive-button">Book Now</button>
                   </div>
                 </div>
               </section>
               
-            <!-- End Flight Options -->
-            <!-- End Actual Website-->
+            <!-- End Flight Options -->          
+            <!-- End Actual Website -->
         </div>
+
+        <footer>
+          <div class="footer-container">
+            <p>Copyright &copy; 2023 Space Tourism Company</p>
+          </div>
+        </footer>
+        
         
         
         <script src="app.js"></script>

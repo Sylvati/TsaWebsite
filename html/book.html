@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/book.css">
+    <!-- JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- End JQuery-->
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- End Flatpickr-->
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- End Header -->
+    <div class="video-background">
+        <div class="video-foreground">
+            <video id="background-video" autoplay muted loop>
+                <source src="/videos/launch.mp4#t=87" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>              
+        </div>
+        <div class="blur"></div>
+      </div>
+      
+      <div class="form-container">
+        <h1>Book Your SpaceTrip</h1>
+            <form id="booking-form">
+                <div>
+                    <label for="passenger-name">Passenger Name</label>
+                    <input type="text" id="passenger-name" name="passenger-name" placeholder="John Doe">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                </div>
+                <div>
+                    <label for="takeoff-date">Takeoff Date</label>
+                    <input type="text" id="takeoff-date" name="takeoff-date" placeholder="Select date and time" data-input>
+                </div>
+                <div>
+                    <label for="return-date">Return Date</label>
+                    <input type="text" id="return-date" name="return-date" placeholder="Select date and time" data-input>
+                </div>
+                <div>
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                    <option value="moon">Moon</option>
+                    <option value="mars">Mars</option>
+                    <option value="jupiter">Jupiter</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ticket-class">Ticket Class</label>
+                    <select id="ticket-class" name="ticket-class">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="Executive">Executive</option>
+                    </select>
+                </div>
+                <input type="submit" value="Book Now">
+            </form>
+            <div id="success-message" style="display: none;">
+                <h2>Form submitted successfully!</h2>
+            </div>
+        </div>
+          
+      </div>
+      <script src="/js/book.js"></script>
+</body>
+</html>
