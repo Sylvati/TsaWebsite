@@ -56,13 +56,13 @@ $(function(){
 });
 
 document.getElementById("economy-button").addEventListener("click", function() {
-    window.location.href = "html/book.html";
+    window.location.href = "../html/book.html";
   });
 
   document.getElementById("business-button").addEventListener("click", function() {
-    window.location.href = "html/book.html";
+    window.location.href = "../html/book.html";
   });
 
   document.getElementById("executive-button").addEventListener("click", function() {
-    window.location.href = "html/book.html";
+    window.location.href = "../html/book.html";
   });
