@@ -33,5 +33,5 @@ form.addEventListener('submit', (event) => {
 });
 
 $(function(){
-    $("#header").load("/html/header.html"); 
+    $("#header").load("../html/header.html"); 
 });
