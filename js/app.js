@@ -52,7 +52,7 @@ $(document).ready(function() {
 });
 
 $(function(){
-    $("#header").load("html/header.html"); 
+    $("#header").load("../html/header.html"); 
 });
 
 document.getElementById("economy-button").addEventListener("click", function() {
