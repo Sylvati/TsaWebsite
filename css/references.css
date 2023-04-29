@@ -1,0 +1,73 @@
+*{
+    border: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --main-color: #635985;
+    --header-text-color: white;
+    --header-text-color-hover: var(--main-color);
+    --header-background-color-hover: rgb(0,0,0, 0.2);
+  }
+  
+
+  body {
+    background-image: url(../images/stars_tilable.jpg);
+    background-position: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+  }
+
+  .container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    font-size: 24px;
+    text-align: center;
+    list-style: none;
+    padding-inline-start: 0px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 50px 20px 20px 20px;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+}
+  
+  a {
+    color: var(--main-color);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    color: #005580;
+  }
+  
