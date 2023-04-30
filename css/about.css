@@ -49,6 +49,10 @@ h1 {
     transform: rotate(180deg);
   }
 
+  .faq-section h3 i {
+    pointer-events: none;
+  }
+
 a {
     color: var(--main-color);
     text-decoration: underline;
