@@ -47,10 +47,13 @@ h1 {
 }
 .faq-section h3.active i {
     transform: rotate(180deg);
+    transition: transform 0.3s ease;
   }
+
 
   .faq-section h3 i {
     pointer-events: none;
+    transition: transform 0.3s ease;
   }
 
 a {
