@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>the best website ever</title>
-        <link rel="stylesheet" type="text/css" href="/css/test.css"/>
+        <title>FAQ | SpaceTrip</title>
+        <link rel="stylesheet" type="text/css" href="../css/about.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--J Query-->
         <script 
             src="https://code.jquery.com/jquery-3.6.4.js"
@@ -11,13 +12,54 @@
         </script>
         <script>
             $(function(){
-                $("#header").load("/html/header.html");
+                $("#header").load("../html/header.html");
             })
         </script>
+        <script src="https://kit.fontawesome.com/7f9c2f0a92.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
     </head>
     <body>
         <div id="header"></div>
-        <h1>about us</h1>
-        <p>we awesome company</p>
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-section">
+                
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> What qualifications are required to participate in the program?</h3>
+                <div class="answer" style="display: none;">
+                    <p>You will need to complete the training course provided by Nancy Vermeulen, a trusted space travel instructor, at <a href="https://space-training.com/" target="_blank">https://space-training.com/</a></p>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> Where does the money go when I purchase a SpaceTrip flight?</h3>
+                <div class="answer" style="display: none;">
+                    <p>All profits go towards raising funding for future space missions for the betterment of mankind. We are partnered with The Office for Outer Space Affairs(<a href="https://www.unov.org/unov/en/unoosa.html#:~:text=The%20Office%20for%20Outer%20Space,peaceful%20uses%20of%20outer%20space.">?</a>) to ensure funding is given to worthy causes.</p>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> Are SpaceTrip flights safe?</h3>
+                <div class="answer" style="display: none;">
+                    <p>SpaceTrip has not had any major accidents since our very first launch. We are partnered with NASA to ensure the safety of all passengers.</p>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> Why do I have to submit an application?</h3>
+                <div class="answer" style="display: none;">
+                    <p>There are many factors that go into when SpaceTrip flights can happen. Certain conditions may prevent the flight you want to take being possible. Other conditions may require you to ride with a different group or date than you originally intended. Additionally, payment must take place over wire transfer to ensure money is safely handled. All of these factors make applications a necessity for SpaceTrip flights to occur.</p>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> Where do launches take place?</h3>
+                <div class="answer" style="display: none;">
+                    <p>Launches take place at NASA's Kennedy Space Center in Florida.</p>
+                </div>
+            </div>
+            <div class="faq-section">
+                <h3 onclick="toggleAnswer(event)"><i class="fas fa-chevron-down"></i> How do SpaceTrip flights land?</h3>
+                <div class="answer" style="display: none;">
+                    <p>SpaceTrip flights use parachutes to safely land in the ocean. Then, SpaceTrip sends boats to retrieve the aircraft and passengers.</p>
+                </div>
+            </div>
+        </div>
     </body>
+    <script src="../js/about.js"></script>
 </html>
